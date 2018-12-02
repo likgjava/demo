@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <h1>hello world!</h1>
+    <h1>{{ city }}</h1>
+    <h1>{{ dict }}</h1>
+    <h1>获取字典数据：{{ dict.name }}</h1>
+    <h1>{{ list }}</h1>
+    <h1>获取列表数据：{{ list.0 }}</h1>
+
+    <div>
+        <h2>图书列表</h2>
+        {% for book in book_list %}
+            <p>{{ forloop.counter }}: {{ book.name }}:{{ book.author }}</p>
+        {% empty %}
+            <p>暂无数据</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
